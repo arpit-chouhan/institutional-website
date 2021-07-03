@@ -1,0 +1,79 @@
+.header .navbar{
+    display: none;
+}
+
+
+.slidebar{
+    position: fixed;
+    background-color: #042331;
+    width: 250px;
+    height: 100%;
+    left: -250px;
+    transition: all 0.5s ease;
+    z-index: 212;
+   
+
+}
+
+
+
+.slidebar ul a{
+    color: white;
+    display: block;
+    height: 100%;
+    /* width: 100%; */
+    text-align: center;
+    line-height: 70px;
+   box-sizing: border-box;
+   border-top: 1px solid rgb(255,255,255,.1);
+   border-bottom: 1px solid black;
+   transition: 0.4s ;
+
+}
+ul li:hover a{
+    padding-left: 23px;
+}
+.slidebar ul a i{
+    margin: 16px;
+}
+#check{
+    display: none;
+}
+label #btn, label #cancle{
+    position: absolute;
+    cursor: pointer;border-radius: 3px;
+    background-color: #042331;
+}label #btn{
+    left: 40px;
+    top: 3px;
+    font-size: 35px;
+    color: white;
+    margin-left: 45%;
+    padding: 6px 12px;
+    transition: all 0.5s;
+
+}
+label #cancle{
+    z-index: 900;
+    left: -195px;
+    top: 17px;
+    font-size: 30px;
+    color: #0a5275;
+    padding: 4px 9px;
+    transition: all 0.5s ease;
+}
+#check:checked ~ .slidebar{
+    left: 0;
+}
+#check:checked ~ label #btn{
+    left: 250px;
+    opacity: 0;
+
+    pointer-events: none;
+    
+}
+#check:checked ~ label #cancle{
+    left: 195px;
+    
+}
+
